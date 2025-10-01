@@ -1,3 +1,88 @@
-# Shop-Customer-Analysis-SQL
+# Shop Customer Analysis with SQL
 
-https://www.kaggle.com/datasets/datascientistanna/customers-dataset
+This project analyzes customer data using PostgreSQL.  
+Dataset source: [Kaggle - Customers Dataset](https://www.kaggle.com/datasets/datascientistanna/customers-dataset)
+
+## Files
+- `dump-postgres-202510012109.sql` → PostgreSQL dump file (backup of the database).
+- `shop-customer-analysis.sql` → SQL queries used for analysis.
+- `README.md` → Project documentation.
+
+## How to Restore the Database
+```bash
+pg_restore --verbose --host=localhost --port=5432 --username=postgres --dbname=postgres dump-postgres-202510012109.sql
+
+
+## 📊 Dataset Information
+The dataset contains information about customers including demographics, income, and spending behavior.
+
+**Customers Table Columns:**
+- `customer_id` → Unique identifier for each customer  
+- `gender` → Customer gender (e.g., Male/Female)  
+- `age` → Customer age in years  
+- `annual_income` → Annual income of the customer  
+- `spending_score` → Score representing spending behavior (likely 1–100)  
+- `profession` → Customer’s profession/occupation  
+- `work_experience` → Years of work experience  
+- `family_size` → Number of family members  
+
+---
+
+## 🗂️ SQL Analysis Steps
+
+1. **Preview Data**  
+   - Check first 100 rows to understand dataset structure.  
+
+2. **Check Data Quality**  
+   - Verified unique `customer_id`.  
+   - Found 35 missing `profession` values → replaced with `'Unknown'`.  
+
+3. **Customer Segmentation**  
+   - Created a view `customer_segments` using **income** and **age groups**.  
+   - Income segments: Low, Middle, High, Very High.  
+   - Age groups: Gen Z, Millennial, Gen X, Boomer, Senior.  
+
+4. **Spending Behavior Analysis**  
+   - **Income + Age**:  
+     - Young low-income customers show high spending potential despite small size → suitable for referral campaigns.  
+     - High/Very High income groups have large size but only moderate spending → can be targeted with loyalty programs or premium offers.  
+     - Middle/Low income older groups show low spending → respond better to value-for-money products.  
+
+   - **Income Only**:  
+     - Very high-income group has the highest spending score with the largest customer base.  
+     - Other groups have relatively close spending levels.  
+
+   - **Age Only**:  
+     - Spending decreases slightly with age.  
+     - No significant outlier risk in these segments.  
+
+   - **Profession**:  
+     - Some variation (e.g., Entertainment & Artist higher than Homemaker & Unknown).  
+     - Overall, profession does not strongly influence spending.  
+
+   - **Family Size**:  
+     - Spending is not significantly affected by family size.  
+
+---
+
+## 🚀 Insights for Marketing Strategy
+
+- **Young Low-Income (18–35):** High spending potential → promote trendy products, social media ads, referral programs.  
+- **High/Very High Income:** Large customer base but moderate spending → loyalty programs, premium product bundles.  
+- **Gen X & Boomers (Middle/Low Income):** Lower spending → value-focused campaigns, family packages.  
+- **Profession Influence:** Weak overall → not reliable for targeting alone.  
+- **Family Size:** No strong impact → can be ignored in segmentation.  
+
+---
+
+## 🛠️ Technologies Used
+- SQL (PostgreSQL)
+- Dataset: Kaggle Customers Dataset  
+
+---
+
+## 📌 How to Use
+1. Clone this repository.  
+2. Import the dataset into your SQL environment.  
+3. Run the queries in `shop-customer-analysis.sql`.  
+4. Explore insights and adapt queries for your own segmentation tasks.  

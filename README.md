@@ -9,7 +9,6 @@ Dataset source: [Kaggle - Customers Dataset](https://www.kaggle.com/datasets/dat
 - `README.md` → Project documentation.
 
 ## How to Restore the Database
-```bash
 pg_restore --verbose --host=localhost --port=5432 --username=postgres --dbname=postgres dump-postgres-202510012109.sql
 
 

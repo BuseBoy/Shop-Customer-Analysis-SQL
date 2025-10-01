@@ -64,16 +64,6 @@ The dataset contains information about customers including demographics, income,
 
 ---
 
-## 🚀 Insights for Marketing Strategy
-
-- **Young Low-Income (18–35):** High spending potential → promote trendy products, social media ads, referral programs.  
-- **High/Very High Income:** Large customer base but moderate spending → loyalty programs, premium product bundles.  
-- **Gen X & Boomers (Middle/Low Income):** Lower spending → value-focused campaigns, family packages.  
-- **Profession Influence:** Weak overall → not reliable for targeting alone.  
-- **Family Size:** No strong impact → can be ignored in segmentation.  
-
----
-
 ## 🛠️ Technologies Used
 - SQL (PostgreSQL)
 - Dataset: Kaggle Customers Dataset  

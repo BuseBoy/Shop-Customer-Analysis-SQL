@@ -4,6 +4,16 @@ This project analyzes customer data from an imaginary retail shop to understand 
 
 Dataset source: [Kaggle - Customers Dataset](https://www.kaggle.com/datasets/datascientistanna/customers-dataset)
 
+## SQL Techniques Used:
+- Data Quality Checks: COUNT(DISTINCT), IS NULL, conditional filtering
+- Data Manipulation: UPDATE statements for data cleaning
+- Database Views: CREATE VIEW for reusable segmentation logic
+- Conditional Logic: CASE WHEN statements for multi-level categorization
+- Aggregate Functions: AVG(), COUNT(), SUM() for statistical analysis
+- Grouping & Sorting: GROUP BY, ORDER BY for segment-level insights
+- Filtering: WHERE clauses for targeted data extraction
+ -Aliasing: Column and table aliases for readable queries
+
 ## Files
 - `dump-postgres-202510012109.sql` → PostgreSQL dump file (backup of the database).
 - `shop-customer-analysis.sql` → SQL queries used for analysis.

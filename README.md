@@ -1,8 +1,5 @@
 # Shop Customer Analysis with SQL
 
-                                 <img width="445" height="470" alt="image" src="https://github.com/user-attachments/assets/1b41d724-3fbf-49b4-a67f-5a41a913a342" />
-
-
 This project analyzes customer data from an imaginary retail shop to understand how demographics and background factors influence spending behavior by using PostgreSQL. The goal is to create meaningful customer segments and provide insights that could be applied to marketing strategies, loyalty programs, and product targeting.
 
 Dataset source: [Kaggle - Customers Dataset](https://www.kaggle.com/datasets/datascientistanna/customers-dataset)

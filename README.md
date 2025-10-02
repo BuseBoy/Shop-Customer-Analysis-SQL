@@ -9,7 +9,7 @@ Dataset source: [Kaggle - Customers Dataset](https://www.kaggle.com/datasets/dat
 - Data Manipulation: UPDATE statements for data cleaning
 - Database Views: CREATE VIEW for reusable segmentation logic
 - Conditional Logic: CASE WHEN statements for multi-level categorization
-- Aggregate Functions: AVG(), COUNT(), SUM() for statistical analysis
+- Aggregate Functions: AVG(), COUNT() for statistical analysis
 - Grouping & Sorting: GROUP BY, ORDER BY for segment-level insights
 - Filtering: WHERE clauses for targeted data extraction
  -Aliasing: Column and table aliases for readable queries

@@ -9,16 +9,6 @@ FROM customers
 LIMIT 100;
 -- Initial data check. We can see the structure of the dataset, types of variables, and possible anomalies. 
 
--- Customers table columns:
--- customer_id → Unique identifier for each customer
--- gender → Customer gender (e.g., Male/Female)
--- age → Customer age in years
--- annual_income → Annual income of the customer
--- spending_score → Score representing spending behavior (likely 1–100)
--- profession → Customer’s profession/occupation
--- work_experience → Years of work experience
--- family_size → Number of family members
-
 -- 2) Check uniqueness of customer_id
 SELECT COUNT(DISTINCT customer_id) AS distinct_data
 FROM customers;

@@ -113,3 +113,13 @@ FROM customers
 GROUP BY family_size
 ORDER BY avg_spending DESC;
 -- Spending behavior does not significantly change with family
+
+--10) Average spending by gender
+SELECT 
+    gender,
+    AVG(spending_score) AS avg_spending,
+    COUNT(gender) AS num_gender
+FROM customers
+GROUP BY gender
+ORDER BY avg_spending DESC;
+--Avg_spending doesnt have correlation with gender. Shop has 1,186 female and 814 male customers.

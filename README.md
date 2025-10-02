@@ -14,16 +14,18 @@ pg_restore --verbose --host=localhost --port=5432 --username=postgres --dbname=p
 
 ## 📊 Dataset Information
 The dataset contains information about customers including demographics, income, and spending behavior.
+## Customers Table 
 
-**Customers Table Columns:**
-- `customer_id` → Unique identifier for each customer  
-- `gender` → Customer gender (e.g., Male/Female)  
-- `age` → Customer age in years  
-- `annual_income` → Annual income of the customer  
-- `spending_score` → Score representing spending behavior (likely 1–100)  
-- `profession` → Customer’s profession/occupation  
-- `work_experience` → Years of work experience  
-- `family_size` → Number of family members  
+| Column Name     | Data Type    |
+|-----------------|--------------|
+| customer_id     | int4         |
+| annual_income   | int4         |
+| age             | int4         |
+| spending_score  | int4         |
+| profession      | varchar(50)  |
+| family_size     | int4         |
+| income_segment  | text         |
+| age_group       | text         |
 
 ---
 
